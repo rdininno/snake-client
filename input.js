@@ -13,20 +13,32 @@ const setupInput = function (conn) {
 };
 
 const handleUserInput = (key) => {
-  
-  if (key === 'w'){
+  //moves
+  if (key === 'w') {
     connection.write("Move: up");
-  } else if (key === 'a'){
+  } else if (key === 'a') {
     connection.write("Move: left");
-  } else if (key === 's'){
+  } else if (key === 's') {
     connection.write("Move: down");
-  } else if (key === 'd'){
+  } else if (key === 'd') {
     connection.write("Move: right");
   }
 
+  //sayings
+  if (key === 'h') {
+    connection.write('Say: hi')
+  } else if (key === 'm') {
+    connection.write('Say: yall better move');
+  } else if (key === 'c') {
+    connection.write('Say: choo choo')
+  } else if (key === "i") {
+    connection.write('Say: im gonna eat you')
+  }
+
+  //exit
   if (key === '\u0003') {
     process.exit();
   }
 };
 
-module.exports = {setupInput};
+module.exports = { setupInput };
