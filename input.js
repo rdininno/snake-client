@@ -15,7 +15,7 @@ const setupInput = function (conn) {
 const handleUserInput = (key) => {
   //moves
   if (key === 'w') {
-    connection.write("Move: up");
+    connection.write("Move: up")
   } else if (key === 'a') {
     connection.write("Move: left");
   } else if (key === 's') {
